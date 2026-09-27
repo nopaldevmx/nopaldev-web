@@ -1,0 +1,56 @@
+/* NopalDev: la misma paleta que Corte. Papel cálido y tinta; agave como color de marca. */
+:root {
+  --paper: #F4F2ED;
+  --surface: #FFFFFF;
+  --ink: #121417;
+  --ink-2: #676B72;
+  --hairline: #E3E0D8;
+  --agave: #0A7A60;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0B0C0E;
+    --surface: #16181C;
+    --ink: #F3F2EE;
+    --ink-2: #9A9EA6;
+    --hairline: #272A30;
+    --agave: #3FCFA2;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+main { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+header.marca { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+header.marca a { color: var(--agave); text-decoration: none; font-weight: 800; font-size: 20px; letter-spacing: -0.3px; }
+h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.6px; margin: 0 0 12px; }
+h2 { font-size: 21px; letter-spacing: -0.3px; margin: 40px 0 8px; }
+h3 { font-size: 17px; margin: 24px 0 4px; }
+p, li { color: var(--ink); }
+.nota { color: var(--ink-2); font-size: 15px; }
+a { color: var(--agave); }
+ul { padding-left: 22px; }
+li + li { margin-top: 6px; }
+.resumen {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 20px;
+  padding: 20px 22px;
+  margin: 28px 0;
+}
+.resumen ul { margin: 8px 0 0; }
+.apps { list-style: none; padding: 0; margin: 24px 0; }
+.apps li {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 20px;
+  padding: 18px 20px;
+}
+.apps strong { font-size: 19px; }
+footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--hairline); color: var(--ink-2); font-size: 14px; }
